@@ -66,6 +66,7 @@ class ConverterTest {
         float out = Converter.rubleToDollar(in);
         float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
+
     }
 
     @Test
