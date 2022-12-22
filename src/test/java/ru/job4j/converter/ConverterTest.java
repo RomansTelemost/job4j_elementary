@@ -33,6 +33,15 @@ class ConverterTest {
     }
 
     @Test
+    void whenConvertNegative1RblThenNegative0dot01Euro() {
+        float in = -1;
+        float expected = -0.01f;
+        float out = Converter.rubleToEuro(in);
+        float eps = 0.009f;
+        Assert.assertEquals(expected, out, eps);
+    }
+
+    @Test
     void whenConvert180RblThen3Dollar() {
         float in = 180;
         float expected = 3;
@@ -56,6 +65,15 @@ class ConverterTest {
         float expected = 0f;
         float out = Converter.rubleToDollar(in);
         float eps = 0.0001f;
+        Assert.assertEquals(expected, out, eps);
+    }
+
+    @Test
+    void whenConvertNegative1RblThenNegative0dot01Dollar() {
+        float in = -1;
+        float expected = -0.01f;
+        float out = Converter.rubleToDollar(in);
+        float eps = 0.009f;
         Assert.assertEquals(expected, out, eps);
     }
 }
