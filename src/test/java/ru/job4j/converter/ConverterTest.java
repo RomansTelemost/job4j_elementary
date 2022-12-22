@@ -15,11 +15,11 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert145RblThen2dot071Euro() {
+    void whenConvert145RblThen2dot0714Euro() {
         float in = 145;
-        float expected = 2.071f;
+        float expected = 2.0714f;
         float out = Converter.rubleToEuro(in);
-        float eps = 0.0009f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 
@@ -33,15 +33,6 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvertNegative1RblThenNegative0dot01Euro() {
-        float in = -1;
-        float expected = -0.01f;
-        float out = Converter.rubleToEuro(in);
-        float eps = 0.009f;
-        Assert.assertEquals(expected, out, eps);
-    }
-
-    @Test
     void whenConvert180RblThen3Dollar() {
         float in = 180;
         float expected = 3;
@@ -51,11 +42,11 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert185RblThen3dot083Dollar() {
+    void whenConvert185RblThen3dot0833Dollar() {
         float in = 185;
-        float expected = 3.083f;
+        float expected = 3.0833f;
         float out = Converter.rubleToDollar(in);
-        float eps = 0.0009f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 
@@ -67,14 +58,5 @@ class ConverterTest {
         float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
 
-    }
-
-    @Test
-    void whenConvertNegative1RblThenNegative0dot01Dollar() {
-        float in = -1;
-        float expected = -0.01f;
-        float out = Converter.rubleToDollar(in);
-        float eps = 0.009f;
-        Assert.assertEquals(expected, out, eps);
     }
 }
