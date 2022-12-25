@@ -21,12 +21,4 @@ class ArrayCharTest {
         boolean result = ArrayChar.startsWith(word, pref);
         assertThat(result).isFalse();
     }
-
-    @Test
-    public void whenPrefixIsGreaterLengthThenNotException() {
-        char[] word = {'H', 'i'};
-        char[] pref = {'H', 'i', 'r'};
-        boolean result = ArrayChar.startsWith(word, pref);
-        assertThat(result).isTrue();
-    }
 }
