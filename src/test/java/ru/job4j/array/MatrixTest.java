@@ -8,13 +8,13 @@ class MatrixTest {
 
     @Test
     public void when2on2() {
-//        int size = 2;
-//        int[][] result = Matrix.multiple(size);
-//        int[][] expected = {
-//                {1, 2},
-//                {2, 4}
-//        };
-//        assertThat(result).isDeepEqualTo(expected);
+        int size = 2;
+        int[][] result = Matrix.multiple(size);
+        int[][] expected = {
+                {1, 2},
+                {2, 4}
+        };
+        assertThat(result).isDeepEqualTo(expected);
     }
 
     @Test
