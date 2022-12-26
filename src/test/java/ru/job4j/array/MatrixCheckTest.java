@@ -3,6 +3,8 @@ package ru.job4j.array;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MatrixCheckTest {
 
@@ -88,5 +90,57 @@ class MatrixCheckTest {
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'Y', 'Z'};
         assertThat(result).containsExactly(expected);
+    }
+
+    @Test
+    public void whenDataMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertTrue(result);
+    }
+
+    @Test
+    public void whenDataNotMonoByTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertFalse(result);
+    }
+
+    @Test
+    public void whenDataHMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertTrue(result);
+    }
+
+    @Test
+    public void whenDataDiagMonoIsTrueThenFalse() {
+        char[][] input = {
+                {'X', ' ', ' ', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', ' ', 'X'},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertFalse(result);
     }
 }
