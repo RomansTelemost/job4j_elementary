@@ -2,16 +2,6 @@ package ru.job4j.array;
 
 public class JavaNameValidator {
 
-    public static void main(String[] args) {
-        String s = "Roman";
-        String number = "0123";
-        char[] charArray = s.toCharArray();
-//        ch.co
-        Character.isDigit('2');
-        int code = number.codePointAt(0);
-        System.out.println(code);
-    }
-
     public static boolean isNameValid(String name) {
         if (name.isEmpty()) {
             return false;
