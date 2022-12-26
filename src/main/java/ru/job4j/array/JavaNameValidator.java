@@ -13,7 +13,7 @@ public class JavaNameValidator {
                 if (!isSpecialSymbol(name.codePointAt(i))
                         && !isUpperLatinLetter(name.codePointAt(i))
                         && !isLowerLatinLetter(name.codePointAt(i))
-                && !Character.isDigit(name.charAt(i))) {
+                        && !Character.isDigit(name.charAt(i))) {
                     return false;
                 }
             }
