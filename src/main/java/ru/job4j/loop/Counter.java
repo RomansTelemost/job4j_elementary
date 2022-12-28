@@ -2,6 +2,12 @@ package ru.job4j.loop;
 
 public class Counter {
 
+    /**
+     * Add the sum of numbers in the range of numbers
+     * @param start - first number
+     * @param finish - last number
+     * @return
+     */
     public static int sum(int start, int finish) {
         int sum = 0;
         for (int i = start; i <= finish; i++) {

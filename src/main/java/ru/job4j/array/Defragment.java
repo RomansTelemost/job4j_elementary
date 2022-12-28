@@ -2,6 +2,13 @@ package ru.job4j.array;
 
 public class Defragment {
 
+    /**
+     *
+     * @author Roman Coin "gcoin@gmail.com"
+     * Moved all values forward and null values back
+     * @param array
+     * @return
+     */
     public static String[] compress(String[] array) {
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {

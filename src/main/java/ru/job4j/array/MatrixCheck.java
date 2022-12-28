@@ -32,6 +32,11 @@ public class MatrixCheck {
         return rsl;
     }
 
+    /**
+     * Determine the winner. Check X symbol in two-dimension array
+     * @param board
+     * @return
+     */
     public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int i = 0; i < board.length; i++) {
