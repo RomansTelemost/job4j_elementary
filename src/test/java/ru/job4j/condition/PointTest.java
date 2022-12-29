@@ -35,8 +35,8 @@ class PointTest {
     @Test
     void whenX1OneX2OneY1FiveY2OneZ1OneZ2TwoThen5dot0() {
         Point pointA = new Point(1, 5, 5);
-        Point pointB = new Point(1, 1, 2);
-        double expected = 5.0;
+        Point pointB = new Point(5, 1, 2);
+        double expected = 6.4;
         double actual = pointB.distance3d(pointA);
         Assert.assertEquals(expected, actual, 0.01d);
     }
