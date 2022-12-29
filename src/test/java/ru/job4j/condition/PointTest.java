@@ -31,4 +31,13 @@ class PointTest {
         double actual = pointB.distance(pointA);
         Assert.assertEquals(expected, actual, 0.01d);
     }
+
+    @Test
+    void whenX1OneX2OneY1FiveY2OneZ1OneZ2TwoThen5dot0() {
+        Point pointA = new Point(1, 5, 5);
+        Point pointB = new Point(1, 1, 2);
+        double expected = 5.0;
+        double actual = pointB.distance3d(pointA);
+        Assert.assertEquals(expected, actual, 0.01d);
+    }
 }
