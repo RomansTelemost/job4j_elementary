@@ -5,10 +5,9 @@ public class SimpleStringEncoder {
     public static String encode(String inputString) {
         StringBuilder result = new StringBuilder();
         int symbolCounter = 1;
-        char[] charArr = inputString.toCharArray();
-        for (int i = 0; i <= charArr.length - 1; i++) {
-            if (i == charArr.length - 1 || charArr[i] != charArr[i + 1]) {
-                result.append(charArr[i]);
+        for (int i = 0; i <= inputString.length() - 1; i++) {
+            if (i == inputString.length() - 1 || inputString.charAt(i) != inputString.charAt(i + 1)) {
+                result.append(inputString.charAt(i));
                 if (symbolCounter != 1) {
                     result.append(symbolCounter);
                     symbolCounter = 1;
