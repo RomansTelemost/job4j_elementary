@@ -10,13 +10,13 @@ public class SimpleStringEncoder {
         for (int i = 1; i < inputString.length(); i++) {
             if (inputString.charAt(i) == symbol) {
                 symbolCounter++;
-                continue;
-            }
-            result.append(symbol);
-            symbol = inputString.charAt(i);
-            if (symbolCounter != 1) {
-                result.append(symbolCounter);
-                symbolCounter = 1;
+            } else {
+                result.append(symbol);
+                symbol = inputString.charAt(i);
+                if (symbolCounter != 1) {
+                    result.append(symbolCounter);
+                    symbolCounter = 1;
+                }
             }
         }
         result.append(symbol);
@@ -28,6 +28,5 @@ public class SimpleStringEncoder {
 
     public static void main(String[] args) {
         System.out.println(encode("aaabbbc"));
-
     }
 }
